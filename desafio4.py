@@ -14,3 +14,8 @@ for i in range(n):
     except Exception as identifier:
         clients.append([i,0])
 
+def takeSecond(elem):
+    return elem[1]
+
+clients.sort(key=takeSecond)
+print(clients)
