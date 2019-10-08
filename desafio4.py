@@ -19,3 +19,17 @@ def takeSecond(elem):
 
 clients.sort(key=takeSecond)
 print(clients)
+
+total_time = 0
+times = []
+for i in range(len(clients)):
+    if i == 0:
+        total_time = clients[i][1]
+        times.append(total_time)
+    else: 
+        total_time = 0
+        total_time = sum(times)
+        total_time += clients[i][1] - 2
+        times.append(total_time)
+
+print(sum(times)/3)
